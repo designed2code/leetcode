@@ -23,6 +23,24 @@ Incrementing by one gives 9 + 1 = 10.
 Thus, the result should be [1,0].
 
 // CODE
+// ONE LINER
 var plusOne = function(digits) {
   return (BigInt(digits.join("")) +1n).toString().split("")
 };
+
+// USING LOOP
+var plusOne = function(digits){
+//   Start the loop from back
+  for(let i = digits.length-1;i>=0;i--){
+//     Check if the last digit is less than 9 if it is then simply add 1 and return digits array
+    if(digits[i] < 9){
+      digits[i]++
+      return digits }
+//     If the last element is 9 then make it 0 and then again go to the if condition
+    digits[i] = 0
+  }
+//   Worst Case if the digits array contains all the elements as 9 example digits = [9,9,9,9]
+//   We need to add extra 1 to the start of the array so the final result should look like digits = [1,0,0,0,0]
+  digits.unshift(1)
+  return digits
+}
