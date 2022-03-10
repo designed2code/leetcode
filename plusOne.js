@@ -40,7 +40,7 @@ var plusOne = function(digits){
     digits[i] = 0
   }
 //   Worst Case if the digits array contains all the elements as 9 example digits = [9,9,9,9]
-//   We need to add extra 1 to the start of the array so the final result should look like digits = [1,0,0,0,0]
+//   We need to add extra 1 to the start of the array so the final result should look like digits = [1,0,0,0,0] 
   digits.unshift(1)
   return digits
 }
