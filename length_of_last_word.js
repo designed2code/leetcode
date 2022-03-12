@@ -11,3 +11,11 @@ var lengthOfLastWord = function(s) {
    let len = lastWord.length
    return len
 };
+
+// CODE (One Liner)
+const lengthOfTheLastWord = (s) => {
+   return s ? s.trim().split(" ").pop().length : 0
+   
+/* If string exists then remove white spaces using trim() then split it to an array remove last element using pop()
+and then find length of last word using length method */    
+}
