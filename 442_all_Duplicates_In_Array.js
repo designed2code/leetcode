@@ -106,3 +106,18 @@ var findDuplicates = function(nums) {
 // Final Result 
 // [-4,-3,-2,-7,8,2,-3,-1]
 // Final result = [2,3]
+
+// CODE USING ARRAY AND SET
+var findDuplicates = function(nums) {
+    const output = []
+    const numbers = new Set()
+    
+    for(let i =0;i<=nums.length;i++){
+        if(!numbers.has(nums[i])){
+            numbers.add(nums[i])
+        }else{
+        output.push(nums[i])
+        }
+    }
+    return output
+};
